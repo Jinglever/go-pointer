@@ -1,8 +1,8 @@
 package jgptr
 
-// CompareStringPointer compare string pointer
+// CompareString compare string pointer
 // return true if a and b are both nil or a == b
-func CompareStringPointer(a, b *string) bool {
+func CompareString(a, b *string) bool {
 	if a != nil && b != nil {
 		return *a == *b
 	}
@@ -12,9 +12,9 @@ func CompareStringPointer(a, b *string) bool {
 	return false
 }
 
-// CompareUint64Pointer compare uint64 pointer
+// CompareUint64 compare uint64 pointer
 // return true if a and b are both nil or a == b
-func CompareUint64Pointer(a, b *uint64) bool {
+func CompareUint64(a, b *uint64) bool {
 	if a != nil && b != nil {
 		return *a == *b
 	}

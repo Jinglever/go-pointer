@@ -6,7 +6,7 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestCompareStringPointer(t *testing.T) {
+func TestCompareString(t *testing.T) {
 	// use case and assert
 	cases := []struct {
 		a, b   *string
@@ -19,11 +19,11 @@ func TestCompareStringPointer(t *testing.T) {
 		{NewString("a"), NewString("b"), false},
 	}
 	for i, c := range cases {
-		assert.Equal(t, c.expect, CompareStringPointer(c.a, c.b), "case %v", i)
+		assert.Equal(t, c.expect, CompareString(c.a, c.b), "case %v", i)
 	}
 }
 
-func TestCompareUint64Pointer(t *testing.T) {
+func TestCompareUint64(t *testing.T) {
 	// use case and assert
 	cases := []struct {
 		a, b   *uint64
@@ -36,6 +36,6 @@ func TestCompareUint64Pointer(t *testing.T) {
 		{NewUint64(1), NewUint64(2), false},
 	}
 	for i, c := range cases {
-		assert.Equal(t, c.expect, CompareUint64Pointer(c.a, c.b), "case %v", i)
+		assert.Equal(t, c.expect, CompareUint64(c.a, c.b), "case %v", i)
 	}
 }
