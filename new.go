@@ -12,6 +12,10 @@ func NewInt64(i int64) *int64 {
 	return &i
 }
 
+func NewUint8(i uint8) *uint8 {
+	return &i
+}
+
 func NewInt8(i int8) *int8 {
 	return &i
 }
