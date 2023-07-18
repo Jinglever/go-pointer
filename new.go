@@ -1,5 +1,7 @@
 package jgptr
 
+import "time"
+
 func NewString(s string) *string {
 	return &s
 }
@@ -46,4 +48,8 @@ func NewFloat32(f float32) *float32 {
 
 func NewBool(b bool) *bool {
 	return &b
+}
+
+func NewTime(t time.Time) *time.Time {
+	return &t
 }

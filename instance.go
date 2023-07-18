@@ -1,5 +1,7 @@
 package jgptr
 
+import "time"
+
 // GetString get string by pointer
 // return "" if pointer is nil
 func GetString(pointer *string) string {
@@ -104,6 +106,15 @@ func GetFloat32(pointer *float32) float32 {
 func GetBool(pointer *bool) bool {
 	if pointer == nil {
 		return false
+	}
+	return *pointer
+}
+
+// GetTime get time.Time by pointer
+// return zero time if pointer is nil
+func GetTime(pointer *time.Time) time.Time {
+	if pointer == nil {
+		return time.Time{}
 	}
 	return *pointer
 }
