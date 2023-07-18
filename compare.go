@@ -1,5 +1,7 @@
 package jgptr
 
+import "time"
+
 // CompareString compare string pointer
 // return true if a and b are both nil or a == b
 func CompareString(a, b *string) bool {
@@ -137,6 +139,18 @@ func CompareFloat32(a, b *float32) bool {
 func CompareBool(a, b *bool) bool {
 	if a != nil && b != nil {
 		return *a == *b
+	}
+	if a == nil && b == nil {
+		return true
+	}
+	return false
+}
+
+// CompareTime compare time.Time pointer
+// return true if a and b are both nil or a == b
+func CompareTime(a, b *time.Time) bool {
+	if a != nil && b != nil {
+		return a.Equal(*b)
 	}
 	if a == nil && b == nil {
 		return true
